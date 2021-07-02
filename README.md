@@ -56,12 +56,13 @@ It worked after I put it after in front after the `<return .share>` line.
 
 ![step4-error](screenshots/front-end_step4_add_api_crud.png)
 
-Another interesting thing I noticed from this module and module 5 but didn't give me an error:
+### Other Observations
+
+One interesting thing I noticed from module 4 and module 5 but didn't give me an error:
 
     - In **Add API Client Library to the Xcode Project**, I only got 10 pods installed instead of 11 message in my terminal, but that didn't cause me any error. The image below is the message screenshot from AWS instruction.
     
-    ![step4-weird](screenshots/aws_step4.png)
-    
     - Also in module 5, for **Add Amplify Storage Libraries to the Xcode Project**, I got 11 pods installed instead of 12, but that also didn't cause me any error. 
 
+![step4-weird](screenshots/aws_step4.png)
 
