@@ -1,0 +1,82 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-iosgettingstarted-dev-132503-authRole",
+      "UnauthRoleArn": "arn:aws:iam::096272469184:role/amplify-iosgettingstarted-dev-132503-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::096272469184:role/amplify-iosgettingstarted-dev-132503-authRole",
+      "Region": "us-west-2",
+      "DeploymentBucketName": "amplify-iosgettingstarted-dev-132503-deployment",
+      "UnauthRoleName": "amplify-iosgettingstarted-dev-132503-unauthRole",
+      "StackName": "amplify-iosgettingstarted-dev-132503",
+      "StackId": "arn:aws:cloudformation:us-west-2:096272469184:stack/amplify-iosgettingstarted-dev-132503/42684210-d9e1-11eb-ab7c-06bcc63c3641",
+      "AmplifyAppId": "d3b3cbnur8s0d5",
+      "AuthTriggerTemplateURL": ""
+    }
+  },
+  "auth": {
+    "iosgettingstartedfae231eb": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false,
+      "output": {
+        "UserPoolId": "us-west-2_ryVxMPEIP",
+        "AppClientIDWeb": "3727161n6jit81a52f218sn0n3",
+        "AppClientID": "6oqhjq83hf4tg8d2amiv4et481",
+        "IdentityPoolId": "us-west-2:56ff894b-709c-489f-89bb-b2e10285fe8a",
+        "UserPoolArn": "arn:aws:cognito-idp:us-west-2:096272469184:userpool/us-west-2_ryVxMPEIP",
+        "IdentityPoolName": "iosgettingstartedfae231eb_identitypool_fae231eb__dev",
+        "UserPoolName": "iosgettingstartedfae231eb_userpool_fae231eb",
+        "HostedUIDomain": "iosgettingstarted755495be-755495be-dev",
+        "OAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"gettingstarted://\"],\"LogoutURLs\":[\"gettingstarted://\"]}"
+      },
+      "lastPushTimeStamp": "2021-07-02T18:53:56.083Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-iosgettingstarted-dev-132503-deployment/amplify-cfn-templates/auth/iosgettingstartedfae231eb-cloudformation-template.yml",
+        "logicalId": "authiosgettingstartedfae231eb"
+      },
+      "lastPushDirHash": "UMIwrEONDOrSk0WdJ3oYfMssm04="
+    }
+  },
+  "api": {
+    "iosgettingstarted": {
+      "service": "AppSync",
+      "providerPlugin": "awscloudformation",
+      "output": {
+        "authConfig": {
+          "defaultAuthentication": {
+            "authenticationType": "AMAZON_COGNITO_USER_POOLS",
+            "userPoolConfig": {
+              "userPoolId": "authiosgettingstartedfae231eb"
+            }
+          },
+          "additionalAuthenticationProviders": []
+        },
+        "GraphQLAPIIdOutput": "fqqhhkerh5akjm52imlwpuh75m",
+        "GraphQLAPIEndpointOutput": "https://jb2t4x5qnfdb5ioorltaso7noy.appsync-api.us-west-2.amazonaws.com/graphql"
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-iosgettingstarted-dev-132503-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+        "logicalId": "apiiosgettingstarted"
+      },
+      "lastPushTimeStamp": "2021-07-02T18:53:56.094Z",
+      "lastPushDirHash": "MjXrZNjddjOafjzZWRoCJJNskSw="
+    }
+  },
+  "storage": {
+    "image": {
+      "service": "S3",
+      "providerPlugin": "awscloudformation",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-iosgettingstarted-dev-132503-deployment/amplify-cfn-templates/storage/s3-cloudformation-template.json",
+        "logicalId": "storageimage"
+      },
+      "lastPushTimeStamp": "2021-07-02T18:53:56.102Z",
+      "output": {
+        "BucketName": "iosgettingstartedb0dac9b877584669b2f3031a3d2dbf132503-dev",
+        "Region": "us-west-2"
+      },
+      "lastPushDirHash": "YSZ7ps+5EL+uB6QecFuArsi66ug="
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+    "UserAgent": "aws-amplify/cli",
+    "Version": "0.1.0",
+    "IdentityManager": {
+        "Default": {}
+    },
+    "CredentialsProvider": {
+        "CognitoIdentity": {
+            "Default": {
+                "PoolId": "us-west-2:***",
+                "Region": "us-west-2"
+            }
+        }
+    },
+    "CognitoUserPool": {
+        "Default": {
+            "PoolId": "us-west-2_***",
+            "AppClientId": "***",
+            "Region": "us-west-2"
+        }
+    },
+    "Auth": {
+        "Default": {
+            "OAuth": {
+                "WebDomain": "***.auth.us-west-2.amazoncognito.com",
+                "AppClientId": "***",
+                "SignInRedirectURI": "gettingstarted://",
+                "SignOutRedirectURI": "gettingstarted://",
+                "Scopes": [
+                    "phone",
+                    "email",
+                    "openid",
+                    "profile",
+                    "aws.cognito.signin.user.admin"
+                ]
+            },
+            "authenticationFlowType": "USER_SRP_AUTH"
+        }
+    },
+    "AppSync": {
+        "Default": {
+            "ApiUrl": "https://***.appsync-api.us-west-2.amazonaws.com/graphql",
+            "Region": "us-west-2",
+            "AuthMode": "AMAZON_COGNITO_USER_POOLS",
+            "ClientDatabasePrefix": "iosgettingstarted_AMAZON_COGNITO_USER_POOLS"
+        }
+    },
+    "S3TransferUtility": {
+        "Default": {
+            "Bucket": "***",
+            "Region": "us-west-2"
+        }
+    }
+}
